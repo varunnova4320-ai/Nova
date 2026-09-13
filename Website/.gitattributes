@@ -1,0 +1,27 @@
+*.sh			text eol=lf
+
+# Binary JS files (contain embedded binary data, not plain text)
+amt/amt-setupbin.js		binary
+amt/amt-ider-module.js	binary
+amt/amt-redir-mesh.js	binary
+public/scripts/amt-0.2.0.js	binary
+public/scripts/amt-setupbin-0.1.0.js	binary
+public/scripts/zlib-inflate.js	binary
+public/scripts/zlib-inflate-min.js	binary
+public/scripts/agent-desktop-0.0.2-min.js	binary
+public/scripts/agent-desktop-0.0.2.js	binary
+public/scripts/agent-rdp-0.0.1.js	binary
+public/scripts/agent-redir-ws-0.1.1-min.js	binary
+public/scripts/agent-redir-ws-0.1.1.js	binary
+public/scripts/amt-desktop-0.0.2-min.js	binary
+public/scripts/amt-desktop-0.0.2.js	binary
+public/scripts/amt-ider-ws-0.0.1.js	binary
+public/scripts/amt-redir-ws-0.1.0.js	binary
+public/scripts/amt-script-0.2.0.js	binary
+public/scripts/amt-terminal-0.0.2-min.js	binary
+public/scripts/amt-terminal-0.0.2.js	binary
+public/scripts/amt-wsman-0.2.0.js	binary
+public/scripts/amt-wsman-ws-0.2.0.js	binary
+public/mstsc/client.js	binary
+public/mstsc/keyboard.js	binary
+public/mstsc/rle.js	binary
