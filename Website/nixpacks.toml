@@ -5,4 +5,4 @@ nixPkgs = ["nodejs_20"]
 cmds = ["npm install --omit=dev --force"]
 
 [start]
-cmd = "mkdir -p meshcentral-data && ([ ! -f meshcentral-data/config.json ] && cp meshcentral-default-config.json meshcentral-data/config.json || true) && node meshcentral.js"
+cmd = "mkdir -p meshcentral-data && cp -f meshcentral-default-config.json meshcentral-data/config.json && node meshcentral.js"
