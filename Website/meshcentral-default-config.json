@@ -4,7 +4,7 @@
     "redirPort": 8080,
     "cert": "devicenex.tech",
     "WANonly": true,
-    "tlsOffload": true
+    "tlsOffload": "0.0.0.0"
   },
   "domains": {
     "": {
