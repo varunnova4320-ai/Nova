@@ -1,9 +1,12 @@
 {
   "settings": {
-    "port": 4430,
-    "redirPort": 8080,
     "cert": "devicenex.tech",
-    "WANonly": true
+    "WANonly": true,
+    "port": 4430,
+    "aliasPort": 443,
+    "redirPort": 8080,
+    "redirAliasPort": 80,
+    "tlsOffload": "0.0.0.0"
   },
   "domains": {
     "": {
