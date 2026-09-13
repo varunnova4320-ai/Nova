@@ -10,7 +10,7 @@
     "": {
       "title": "DeviceNex",
       "newAccounts": true,
-      "minify": true
+      "minify": false
     }
   }
 }
