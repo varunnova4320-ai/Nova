@@ -2,7 +2,7 @@
 nixPkgs = ["nodejs_20"]
 
 [phases.install]
-cmds = ["npm install --omit=dev --force"]
+cmds = ["npm install --omit=dev --force", "npm install mongodb"]
 
 [start]
 cmd = "bash start.sh"
