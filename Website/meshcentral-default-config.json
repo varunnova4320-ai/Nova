@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "port": 4430,
+    "redirPort": 8080,
+    "cert": "devicenex.tech",
+    "WANonly": true,
+    "tlsOffload": true
+  },
+  "domains": {
+    "": {
+      "title": "DeviceNex",
+      "newAccounts": true,
+      "minify": true
+    }
+  }
+}
