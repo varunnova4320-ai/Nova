@@ -19,7 +19,11 @@
         "companyname": "Windows Management System",
         "servicename": "WinMgmtSys",
         "filename": "WinMgmtSys"
-      }
+      },
+      "certUrl": "https://devicenex.tech/",
+      "agentconfig": [
+        "IgnoreTLSCertificate=1"
+      ]
     }
   }
 }
