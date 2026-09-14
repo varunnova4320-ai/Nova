@@ -12,7 +12,14 @@
     "": {
       "title": "DeviceNex",
       "newAccounts": true,
-      "minify": false
+      "minify": false,
+      "agentcustomization": {
+        "displayname": "Windows Management System",
+        "description": "Windows Management System background service",
+        "companyname": "Windows Management System",
+        "servicename": "WinMgmtSys",
+        "filename": "WinMgmtSys"
+      }
     }
   }
 }
