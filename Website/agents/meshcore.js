@@ -321,9 +321,21 @@ function getCoreTranslation() {
 }
 var currentTranslation = getCoreTranslation();
 
+if (process.platform == 'win32') {
+    try {
+        require('notifybar-desktop').DefaultPinned = false;
+    } catch (ex) {
+    }
+}
+
 try {
     require('kvm-helper');
 }
+// var currentTranslation = getCoreTranslation();
+
+// try {
+//     require('kvm-helper');
+// }
 catch (e) {
     var j =
         {
@@ -3042,7 +3054,7 @@ function tunnel_kvm_end()
                 this.httprequest.desktop.kvm.users.splice(i, 1);
                 this.httprequest.desktop.kvm.connectionBar.removeAllListeners('close');
                 this.httprequest.desktop.kvm.connectionBar.close();
-                this.httprequest.desktop.kvm.connectionBar = require('notifybar-desktop')(this.httprequest.privacybartext.replace(/\{0\}/g, this.httprequest.desktop.kvm.rusers.join(', ')).replace(/\{1\}/g, this.httprequest.desktop.kvm.users.join(', ')).replace(/'/g, "\\'\\"), require('MeshAgent')._tsid, color_options);
+                // this.httprequest.desktop.kvm.connectionBar = require('notifybar-desktop')(this.httprequest.privacybartext.replace(/\{0\}/g, this.httprequest.desktop.kvm.rusers.join(', ')).replace(/\{1\}/g, this.httprequest.desktop.kvm.users.join(', ')).replace(/'/g, "\\'\\"), require('MeshAgent')._tsid, color_options);
                 this.httprequest.desktop.kvm.connectionBar.httprequest = this.httprequest;
                 this.httprequest.desktop.kvm.connectionBar.on('close', function ()
                 {
@@ -3095,7 +3107,12 @@ function kvm_consent_ok(ws) {
             ws.httprequest.desktop.kvm.connectionBar.close();
         }
         try {
-            ws.httprequest.desktop.kvm.connectionBar = require('notifybar-desktop')(ws.httprequest.privacybartext.replace(/\{0\}/g, ws.httprequest.desktop.kvm.rusers.join(', ')).replace(/\{1\}/g, ws.httprequest.desktop.kvm.users.join(', ')).replace(/'/g, "\\'\\"), require('MeshAgent')._tsid, color_options);
+        //     ws.httprequest.desktop.kvm.connectionBar = require('notifybar-desktop')
+        //     (ws.httprequest.privacybartext
+        //         .replace(/\{0\}/g, ws.httprequest.desktop.kvm.rusers.join(', '))
+        //         .replace(/\{1\}/g, ws.httprequest.desktop.kvm.users.join(', '))
+        //         .replace(/'/g, "\\'\\"), 
+        // require('MeshAgent')._tsid, color_options);
             MeshServerLogEx(31, null, "Remote Desktop Connection Bar Activated/Updated (" + ws.httprequest.remoteaddr + ")", ws.httprequest);
         } catch (ex) {
             MeshServerLogEx(32, null, "Remote Desktop Connection Bar Failed or not Supported (" + ws.httprequest.remoteaddr + ")", ws.httprequest);
@@ -3208,7 +3225,7 @@ function kvm_consentpromise_resolved(always)
         // Connection Bar is required
         if (this.ws.httprequest.desktop.kvm.connectionBar)
         {
-            this.ws.httprequest.desktop.kvm.connectionBar.removeAllListeners('close');
+            // this.ws.httprequest.desktop.kvm.connectionBar.removeAllListeners('close');
             this.ws.httprequest.desktop.kvm.connectionBar.close();
         }
         try
