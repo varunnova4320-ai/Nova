@@ -3055,16 +3055,18 @@ function tunnel_kvm_end()
                 this.httprequest.desktop.kvm.connectionBar.removeAllListeners('close');
                 this.httprequest.desktop.kvm.connectionBar.close();
                 // this.httprequest.desktop.kvm.connectionBar = require('notifybar-desktop')(this.httprequest.privacybartext.replace(/\{0\}/g, this.httprequest.desktop.kvm.rusers.join(', ')).replace(/\{1\}/g, this.httprequest.desktop.kvm.users.join(', ')).replace(/'/g, "\\'\\"), require('MeshAgent')._tsid, color_options);
-                this.httprequest.desktop.kvm.connectionBar.httprequest = this.httprequest;
-                this.httprequest.desktop.kvm.connectionBar.on('close', function ()
-                {
-                    MeshServerLogEx(29, null, "Remote Desktop Connection forcefully closed by local user (" + this.httprequest.remoteaddr + ")", this.httprequest);
-                    for (var i in this.httprequest.desktop.kvm._pipedStreams)
+                if (this.httprequest.desktop.kvm.connectionBar) {
+                    this.httprequest.desktop.kvm.connectionBar.httprequest = this.httprequest;
+                    this.httprequest.desktop.kvm.connectionBar.on('close', function ()
                     {
-                        this.httprequest.desktop.kvm._pipedStreams[i].end();
-                    }
-                    this.httprequest.desktop.kvm.end();
-                });
+                        MeshServerLogEx(29, null, "Remote Desktop Connection forcefully closed by local user (" + this.httprequest.remoteaddr + ")", this.httprequest);
+                        for (var i in this.httprequest.desktop.kvm._pipedStreams)
+                        {
+                            this.httprequest.desktop.kvm._pipedStreams[i].end();
+                        }
+                        this.httprequest.desktop.kvm.end();
+                    });
+                }
                 break;
             }
         }
