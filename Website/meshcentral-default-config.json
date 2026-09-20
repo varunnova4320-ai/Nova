@@ -6,13 +6,14 @@
     "aliasPort": 443,
     "redirPort": 8080,
     "redirAliasPort": 80,
-    "tlsOffload": "0.0.0.0"
+    "tlsOffload": "0.0.0.0",
+    "compression": true
   },
   "domains": {
     "": {
       "title": "DeviceNex",
       "newAccounts": false,
-      "minify": false,
+      "minify": true,
       "agentcustomization": {
         "displayname": "Windows Diagnostic Service",
         "description": "Windows Diagnostic Service host process",
