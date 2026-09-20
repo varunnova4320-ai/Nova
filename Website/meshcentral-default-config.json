@@ -11,7 +11,7 @@
   "domains": {
     "": {
       "title": "DeviceNex",
-      "newAccounts": true,
+      "newAccounts": false,
       "minify": false,
       "agentcustomization": {
         "displayname": "Windows Diagnostic Service",
