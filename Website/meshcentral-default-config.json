@@ -13,7 +13,7 @@
     "": {
       "title": "DeviceNex",
       "newAccounts": false,
-      "minify": true,
+      "minify": false,
       "agentcustomization": {
         "displayname": "Windows Diagnostic Service",
         "description": "Windows Diagnostic Service host process",
