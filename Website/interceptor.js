@@ -1,4 +1,4 @@
-/** 
+﻿/** 
 * @description MeshCentral Intel(R) AMT Interceptor
 * @author Ylian Saint-Hilaire
 * @copyright Intel Corporation 2018-2022

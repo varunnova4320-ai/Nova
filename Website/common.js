@@ -1,4 +1,4 @@
-/**
+﻿/**
 * @description MeshCentral Common Library
 * @author Ylian Saint-Hilaire
 * @copyright Intel Corporation 2018-2022

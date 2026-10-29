@@ -7,7 +7,11 @@
     "redirPort": 8080,
     "redirAliasPort": 80,
     "tlsOffload": "0.0.0.0",
-    "compression": true
+    "compression": true,
+    "agentdownloads": {
+      "enabled": false,
+      "fetchreleases": false
+    }
   },
   "domains": {
     "": {

@@ -712,7 +712,7 @@
         },
         "tLifeTime": {
           "name": "Tunnel Lifetime",
-          "desc": "Defines the tunnelâ€™s lifetime in seconds. A value of 0 means that the tunnel should stay open until it is closed by the server, the CloseRemoteAccessConnection method or when a different policy with a higher priority needs to be processed.",
+          "desc": "Defines the tunnel’s lifetime in seconds. A value of 0 means that the tunnel should stay open until it is closed by the server, the CloseRemoteAccessConnection method or when a different policy with a higher priority needs to be processed.",
           "type": 2,
           "maxlength": 5,
           "value": "0"
@@ -757,7 +757,7 @@
         },
         "tLifeTime": {
           "name": "Tunnel Lifetime",
-          "desc": "Defines the tunnelâ€™s lifetime in seconds. A value of 0 means that the tunnel should stay open until it is closed by the CloseRemoteAccessConnection method or when a different policy with a higher priority needs to be processed.",
+          "desc": "Defines the tunnel’s lifetime in seconds. A value of 0 means that the tunnel should stay open until it is closed by the CloseRemoteAccessConnection method or when a different policy with a higher priority needs to be processed.",
           "type": 2,
           "maxlength": 5,
           "value": "0"

@@ -1,4 +1,4 @@
-/** 
+﻿/** 
 * @description WSMAN communication using websocket
 * @author Ylian Saint-Hilaire
 * @version v0.2.0c

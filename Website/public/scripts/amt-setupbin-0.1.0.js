@@ -111,11 +111,11 @@ var AmtSetupBinDecode = function (file) {
     // RecordHeaderBytes(2)     - indicates the length of the record header in bytes.
     // RecordNumber(4)          - uniquely identifies the record among all records in the file. The field contains a non-negative ordinal value. The value of this field is always zero in the Local Provisioning File Header Record.
     // MajorVersion(1)          - identifies the major version of the file format specification. This is a positive integer that is greater than or equal to 1. The Major Version number is incremented to indicate that changes have been introduced that will cause code written against a lower Major Version number to fail.
-    // MinorVersion(1)          - identifies the minor version of the file format specification. This is an integer that is greater than or equal to 0. The Minor Version number is incremented to indicate that changes have been introduced that will not cause code written against the same Major Version and a lower Minor Version number to fail. The purpose of this behavior is to allow a single local provisioning file to be used for multiple generations of IntelÂ® AMT platform.
+    // MinorVersion(1)          - identifies the minor version of the file format specification. This is an integer that is greater than or equal to 0. The Minor Version number is incremented to indicate that changes have been introduced that will not cause code written against the same Major Version and a lower Minor Version number to fail. The purpose of this behavior is to allow a single local provisioning file to be used for multiple generations of Intel® AMT platform.
     // DataRecordCount(4)       - indicates the total number of data records written in the file when it was created.
     // DataRecordsConsumed(4)   - is a counter value that begins at 0 and is incremented by 1 by each platform BIOS when it consumes a data record from the file. This value is used to determine the offset of the next data record in the file.
     // DataRecordChunkCount(2)  - contains the number of 512-byte chunks in each data record. All data records are the same length.
-    // ModuleList               - contains a list of module identifiers. A moduleâ€™s identifier appears in the list if and only if the data records contain entries for that module. Each module identifier is two bytes in length. The list is terminated by an identifier value of 0. 
+    // ModuleList               - contains a list of module identifiers. A module’s identifier appears in the list if and only if the data records contain entries for that module. Each module identifier is two bytes in length. The list is terminated by an identifier value of 0. 
 
     var obj = {}, UUID = file.substring(0, 16);
     obj.fileType = 0;

@@ -75,7 +75,7 @@ function isProtocolAllowedByRights(rights, protocol) {
     if ((protocol == 1) && ((rights & MESHRIGHT_NOTERMINAL) != 0)) { return false; }
     if ((protocol == 2) && ((rights & MESHRIGHT_NODESKTOP) != 0)) { return false; }
     if ((protocol == 4) && ((rights & MESHRIGHT_NOREGISTRY) != 0)) { return false; }
-    if ((protocol == 5) && ((rights & MESHRIGHT_NOFILES) != 0)) { return false; }
+    if (((protocol == 5) || (protocol == 10)) && ((rights & MESHRIGHT_NOFILES) != 0)) { return false; }
     return true;
 }
 
@@ -268,6 +268,7 @@ function CreateMeshRelayEx(parent, ws, req, domain, user, cookie) {
                         command.realname = user.realname;   // Add real name
                     }
                     if (typeof domain.desktopprivacybartext == 'string') { command.privacybartext = domain.desktopprivacybartext; } // Privacy bar text
+                    if ((typeof domain.desktopprivacybarmaxwidth == 'number') && (domain.desktopprivacybarmaxwidth > 0)) { command.privacybarmaxwidth = domain.desktopprivacybarmaxwidth; } // Privacy bar maximum width
                     delete command.nodeid;              // Remove the nodeid since it's implyed.
                     agent.send(JSON.stringify(command));
                     return true;
@@ -289,6 +290,7 @@ function CreateMeshRelayEx(parent, ws, req, domain, user, cookie) {
                             command.realname = user.realname;       // Add real name
                         }
                         if (typeof domain.desktopprivacybartext == 'string') { command.privacybartext = domain.desktopprivacybartext; } // Privacy bar text
+                        if ((typeof domain.desktopprivacybarmaxwidth == 'number') && (domain.desktopprivacybarmaxwidth > 0)) { command.privacybarmaxwidth = domain.desktopprivacybarmaxwidth; } // Privacy bar maximum width
                         parent.parent.multiServer.DispatchMessageSingleServer(command, routing.serverid);
                         return true;
                     }
